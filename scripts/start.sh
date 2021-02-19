@@ -11,6 +11,13 @@ if [ ! -z "$SSH_KEY" ]; then
  chmod 600 /root/.ssh/id_rsa
 fi
 
+if [ ! -z "$GIT_CREDENTIALS" ]; then
+ git config --global credential.helper store
+
+ echo $GIT_CREDENTIALS > /root/.git-credentials
+ chmod 600 /root/.git-credentials
+fi
+
 # Set custom webroot
 if [ ! -z "$WEBROOT" ]; then
   webroot=$WEBROOT
