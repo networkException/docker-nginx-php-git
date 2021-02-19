@@ -10,6 +10,12 @@ RUN echo @testing http://nl.alpinelinux.org/alpine/edge/testing >> /etc/apk/repo
     echo /etc/apk/respositories && \
     apk update && \
     apk add --no-cache bash \ 
+    gcc \
+    musl-dev \
+    python3-dev \ 
+    libffi-dev \ 
+    openssl-dev \
+    cargo \
     openssh-client \
     wget \
     nginx \
