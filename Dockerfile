@@ -42,9 +42,9 @@ RUN echo @testing http://nl.alpinelinux.org/alpine/edge/testing >> /etc/apk/repo
     php7-dom \
     php7-zip \
     php7-session \
-    python \
-    python-dev \
-    py2-pip \
+    python3 \
+    python3-dev \
+    py3-pip \
     augeas-dev \
     openssl-dev \
     ca-certificates \
