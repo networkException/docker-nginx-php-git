@@ -1,0 +1,17 @@
+version: "3.7"
+
+services:
+    docker-nginx-php-git:
+        container_name: "docker-nginx-php-git"
+        image: "docker.pkg.github.com/networkexception/docker-nginx-php-git/docker-nginx-php-git:latest"
+        restart: unless-stopped
+        ports:
+            - "8080:80"
+            - "8443:442"
+            - "8555:8555"
+        environment:
+            GIT_REPO: "https://github.com/<org>/<repo>"
+            GIT_BRANCH: "<branch>"
+            GIT_EMAIL: "<user>@<domain>"
+            GIT_NAME: "<user>"
+            # GIT_CREDENTIALS: "https://<user>:<token>@github.com"
